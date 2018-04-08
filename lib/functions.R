@@ -146,10 +146,9 @@ calc_weight <- function(data, method = "pearson") {
         
         for (i in 1:length(sim_users)) {
           sim1 <- sim_users[i]
-          sim_items <- k + (outA - k)*(outB - k)*(c2 * sim1) + 
-            ((outA * outB) - k - (outA - k)*(outB - k))*(c2/2 * (1 + sim1))
+          sim_items <- k + (outA - k)*(outB - k)*(c2 * sim1) + ((outA * outB) - k - (outA - k)*(outB - k))*(c2/2 * (1 + sim1))
           sim2 <- (c1 / (outA * outB)) * sim_items
-          if (abs(sim1 - sim2) < 0.001) break
+          if (abs(sim1 - sim2) < 0.001) { break }
         }
         return(sim_user)
       }
