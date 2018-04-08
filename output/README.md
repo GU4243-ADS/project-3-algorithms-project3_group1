@@ -27,5 +27,5 @@ Similarity Weight Matrix
 
 - SimRank
 
-    + MS
+    + MS (https://drive.google.com/file/d/1Lx7vtnzH64TnxsZYx3rTlvcygXitNoBJ/view?usp=sharing)
     + eachmovie
