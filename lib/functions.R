@@ -98,6 +98,13 @@ calc_weight <- function(data, method = "pearson") {
       if (method == 'pearson') {
         return(cor(rowA[joint_values], rowB[joint_values], method = 'pearson'))
       }
+      if (method == 'psig') {
+        
+      }
+      if (method == 'pvar') {
+      }
+      if (method == 'psigvar')  {
+      }
       if (method == 'spearman') {
         return(cor(rowA[joint_values], rowB[joint_values], method = 'spearman'))
       }
