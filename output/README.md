@@ -1,7 +1,7 @@
 # Project 3: Algorithm Implementation and Evaluation
 ### Output folder
 
-- User-Item Matrices
+User-Item Matrices
 
     + MS (link)
     + eachmovie (link)
