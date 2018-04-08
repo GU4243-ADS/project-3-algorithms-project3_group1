@@ -89,7 +89,7 @@ movie_data_transform <- function(movie) {
 
 
 
-calc_weight <- function(data, method = "pearson") {
+calc_weight <- function(data, method) {
   
   ## Calculate similarity weight matrix
   ##
@@ -115,7 +115,15 @@ calc_weight <- function(data, method = "pearson") {
       if (method == 'pearson') {
         return(cor(rowA[joint_values], rowB[joint_values], method = 'pearson'))
       }
-    }
+    } else {
+      if (method == 'spearman') {
+        return(cor(rowA[joint_values], rowB[joint_values], method = 'spearman'))
+      }
+    } else {
+      if (method == 'vector') {
+        return(cosine(rowA[joint_values], rowB[joint_values]))
+      }
+    }  
   }
   
   # Loops over the rows and calculate sall similarities using weight_func
