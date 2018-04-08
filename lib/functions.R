@@ -113,7 +113,8 @@ calc_weight <- function(data, method = "pearson") {
         }
       }
       if (method == 'pvar') {
-        return(wtd.cor(rowA[joint_values], rowB[joint_values], weight = var.weight[joint_values]))
+        result <- wtd.cor(rowA[joint_values], rowB[joint_values], weight = var.weight[joint_values])
+        return(result[[1]])
       }
       if (method == 'psigvar')  {
         
