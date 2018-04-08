@@ -86,6 +86,12 @@ calc_weight <- function(data, method = "pearson") {
   # Iniate the similarity weight matrix
   data       <- as.matrix(data)
   weight_mat <- matrix(NA, nrow = nrow(data), ncol = nrow(data))
+
+  # Calculate item-wise variances and weights
+  variances <- apply(data, 2, var, na.rm = TRUE)
+  var.min <- min(variances, na.rm = TRUE)
+  var.max <- max(variances, na.rm = TRUE)
+  var.weight <- (variances - var.min) / (var.max - var.min)
   
   weight_func <- function(rowA, rowB) {
     
@@ -107,13 +113,10 @@ calc_weight <- function(data, method = "pearson") {
         }
       }
       if (method == 'pvar') {
-        variances <- apply(data, 2, var, na.rm = TRUE)
-        var.min <- min(variances, na.rm = TRUE)
-        var.max <- max(variances, na.rm = TRUE)
-        var.weight <- (variances - var.min) / (var.max - var.min)
         return(wtd.cor(rowA[joint_values], rowB[joint_values], weight = var.weight[joint_values]))
       }
       if (method == 'psigvar')  {
+        
       }
       if (method == 'spearman') {
         return(cor(rowA[joint_values], rowB[joint_values], method = 'spearman'))
