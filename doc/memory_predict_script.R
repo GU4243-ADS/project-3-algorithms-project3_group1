@@ -38,14 +38,14 @@ save(movie_UI, file = "movie_UI.RData")
 # Calculate the full weights on the movie data
 # The below took 87 minutes on my Macbook, 35 on my iMac
 
-movie_sim <- calc_weight(movie_UI)
+movie_sim <- calc_weight(movie_UI, method = "pearson")
 save(movie_sim, file= "movie_sim.RData")
 
 
 # Calculate the full weights on the MS data
 # The below took 30 minutes on my Macbook and 14 on my iMac
 
-MS_sim <- calc_weight(MS_UI)
+MS_sim <- calc_weight(MS_UI, method = "pearson")
 save(MS_sim, file = "MS_sim.RData")
 
 # Calculate predictions for MS
