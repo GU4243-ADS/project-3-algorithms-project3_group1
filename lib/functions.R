@@ -48,8 +48,6 @@ MS_data_transform <- function(MS) {
   return(UI)
 }
 
-
-
 movie_data_transform <- function(movie) {
   
   ## Calculate UI matrix for eachmovie data
@@ -135,6 +133,8 @@ pred_matrix <- function(data, simweights) {
   
   ## Calculate prediction matrix
   ##
+  ## Extended to also return the number of predictions made
+  ##
   ## input: data   - movie data or MS data in user-item matrix form
   ##        simweights - a matrix of similarity weights
   ##
@@ -145,6 +145,7 @@ pred_matrix <- function(data, simweights) {
   
   # Change MS entries from 0 to NA
   pred_mat[pred_mat == 0] <- NA
+  n_preds = sum(pred_mat == NA)
   
   row_avgs <- apply(data, 1, mean, na.rm = TRUE)
   
@@ -167,5 +168,45 @@ pred_matrix <- function(data, simweights) {
     print(i)
   }
   
-  return(pred_mat)
+  return(pred_mat, n_preds)
+}
+
+test_movie_predictions <- function(pred_mat, test_UI, n_preds){
+  
+  ## Calculates the Mean Absolute Error (MAE) of the movie predictions
+  ##
+  ## input: pred_mat: matrix of predicted score made
+  ##        test_UI: UI matrix of test data. Unpredicted parts should 
+  ##                 be set to NA avoid interference in MAE calculation
+  
+  n_preds <- sum(!is.na(test_UI))
+  pred_mat <- pred_mat[row.names(test_UI), colnames(test_UI)]
+  MAE = sum(abs(pred_mat - test_UI),na.rm = T) / n_preds
+  return(MAE)
+}
+
+test_MS_predictions <- function(pred_mat, test_UI){
+  
+  ## Calculates the rank score of Microsoft Predictions
+  ##
+  ## inputs: pred_mat: matrix of predicted interest
+  ##         test_UI: UI matrix of test MS data
+  
+  d <- 0.03 # Threshold for entry into ranking
+  a <- 5 # Half Life for expected view chance
+  
+  # Generates rankings from predicted preference strength
+  f_rank <- function(x){rank(x, ties.method = 'first')}
+  rank_pred <- ncol(pred_mat) - t(apply(pred_mat, 1, f_rank)) + 1
+  rank_test <- ncol(MS_test_UI) - t(apply(MS_test_UI, 1, f_rank)) + 1
+  
+  # Generates max(v_aj - d, 0)
+  modified_truth <- ifelse(MS_test_UI - d > 0, MS_test_UI - d, 0)
+  
+  sum_R_a = sum(1 / (2^((rank_pred[row.names(modified_truth), 
+                                   colnames(modified_truth)]-1)/4)) 
+                * modified_truth)
+  sum_R_a_max = sum(1 / (2^((rank_test-1)/4)) * modified_truth)
+  
+  return(100 * sum_R_a / sum_R_a_max)
 }
