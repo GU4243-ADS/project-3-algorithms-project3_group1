@@ -1,20 +1,16 @@
-###################################################################
-### Memory-based Collaborative Filtering Algorithm Starter Code ###
-###################################################################
+######################################################
+### Memory-based Collaborative Filtering Algorithm ###
+######################################################
 
-### Authors: CIndy Rush
 ### Project 3
 ### ADS Spring 2018
-
+### Group 1
 
 MS_data_transform <- function(MS) {
   
   ## Calculate UI matrix for Microsoft data
-  ##
-  ## input: data   - Microsoft data in original form
-  ##
-  ## output: UI matrix
-  
+  ## Input: data - Microsoft data in original form
+  ## Output: UI matrix
   
   # Find sorted lists of users and vroots
   users  <- sort(unique(MS$V2[MS$V1 == "C"]))
@@ -30,7 +26,7 @@ MS_data_transform <- function(MS) {
   
   user_locs <- which(MS$V1 == "C")
   
-  # Cycle through the users and place 1's for the visited vroots.
+  # Cycle through the users and place 1's for the visited vroots
   for (i in 1:nu) {
     name     <- MS$V2[user_locs[i]]
     this_row <- which(row.names(UI) == name)
@@ -51,12 +47,9 @@ MS_data_transform <- function(MS) {
 movie_data_transform <- function(movie) {
   
   ## Calculate UI matrix for eachmovie data
-  ##
-  ## input: data   - movie data in original form
-  ##
-  ## output: UI matrix
-  
-  
+  ## Input: data - movie data in original form
+  ## Output: UI matrix
+    
   # Find sorted lists of users and vroots
   users  <- sort(unique(movie$User))
   movies <- sort(unique(movie$Movie))
@@ -66,7 +59,7 @@ movie_data_transform <- function(movie) {
   row.names(UI) <- users
   colnames(UI)  <- movies
   
-  # We cycle through the users, finding the user's movies and ratings
+  # Cycle through the users, finding the user's movies and ratings
   for (i in 1:length(users)) {
     user    <- users[i]
     movies  <- movie$Movie[movie$User == user]
@@ -82,29 +75,21 @@ movie_data_transform <- function(movie) {
   return(UI)
 }  
 
-
-
-
-
-
 calc_weight <- function(data, method = "pearson") {
   
   ## Calculate similarity weight matrix
-  ##
-  ## input: data   - movie data or MS data in user-item matrix form
-  ##        method - 'pearson'
-  ##
-  ## output: similarity weight matrix
-  
-  
+  ## Input: data    - movie data or MS data in user-item matrix form
+  ##        method  - 'pearson', 'spearman', 'vector', 'entropy', 'msd', 'simrank'
+  ## Output: similarity weight matrix
+    
   # Iniate the similarity weight matrix
   data       <- as.matrix(data)
   weight_mat <- matrix(NA, nrow = nrow(data), ncol = nrow(data))
   
   weight_func <- function(rowA, rowB) {
     
-    # weight_func takes as input two rows (thought of as rows of the data matrix) and 
-    # calculates the similarity between the two rows according to 'method'
+    # weight_func takes as input two rows (thought of as rows of the UI matrix) and 
+    # calculates the similarity between the two rows according to the chosen 'method'
     
     joint_values <- !is.na(rowA) & !is.na(rowB)
     if (sum(joint_values) == 0) {
