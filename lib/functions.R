@@ -99,8 +99,10 @@ calc_weight <- function(data, method = "pearson", c1 = 0.8, c2 = 0.8) {
         return(cor(rowA[joint_values], rowB[joint_values], method = 'pearson'))
       }
       if (method == 'spearman') {
+        return(cor(rowA[joint_values], rowB[joint_values], method = 'spearman'))
       }
       if (method == 'vector') {
+        return(cosine(rowA[joint_values], rowB[joint_values]))
       }
       if (method == 'entropy')  {
       }
