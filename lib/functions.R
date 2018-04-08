@@ -129,6 +129,12 @@ calc_weight <- function(data, method = "pearson") {
         return(mean((rowA - rowB)^2))
       }
       if (method == 'simrank') {
+        if (any(rowA > 1) {
+          rowA[rowA < 4] <- 0
+          rowA[rowA > 3] <- 1
+          rowB[rowB < 4] <- 0
+          rowB[rowB > 3] <- 1
+        }    
         c1 <- 0.8
         c2 <- 0.8
         outA <- sum(rowA, na.rm = TRUE)
