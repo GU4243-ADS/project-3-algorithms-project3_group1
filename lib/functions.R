@@ -79,7 +79,8 @@ calc_weight <- function(data, method = "pearson") {
   
   ## Calculate similarity weight matrix
   ## Input: data    - movie data or MS data in user-item matrix form
-  ##        method  - 'pearson', 'spearman', 'vector', 'entropy', 'msd', 'simrank'
+  ##        method  - 'pearson', 'psig', 'pvar', 'psigvar', 'spearman', 
+  ##                  'vector', 'entropy', 'msd', 'simrank'
   ## Output: similarity weight matrix
     
   # Iniate the similarity weight matrix
@@ -169,15 +170,12 @@ calc_weight <- function(data, method = "pearson") {
 pred_matrix <- function(data, simweights) {
   
   ## Calculate prediction matrix
-  ##
   ## Extended to also return the number of predictions made
-  ##
-  ## input: data   - movie data or MS data in user-item matrix form
-  ##        simweights - a matrix of similarity weights
-  ##
-  ## output: prediction matrix
+  ## Inputs: data       - movie data or MS data in user-item matrix form
+  ##         simweights - a matrix of similarity weights
+  ## Output: prediction matrix
   
-  # Initiate the prediction matrix.
+  # Initiate the prediction matrix
   pred_mat <- data
   
   # Change MS entries from 0 to NA
@@ -211,10 +209,9 @@ pred_matrix <- function(data, simweights) {
 test_movie_predictions <- function(pred_mat, test_UI){
   
   ## Calculates the Mean Absolute Error (MAE) of the movie predictions
-  ##
-  ## input: pred_mat: matrix of predicted score made
-  ##        test_UI: UI matrix of test data. Unpredicted parts should 
-  ##                 be set to NA avoid interference in MAE calculation
+  ## Inputs: pred_mat - matrix of predicted score made
+  ##         test_UI  - UI matrix of test data. Unpredicted parts should 
+  ##                    be set to NA to avoid interference in MAE calculation
   
   n_preds <- sum(!is.na(test_UI))
   pred_mat <- pred_mat[row.names(test_UI), colnames(test_UI)]
@@ -225,9 +222,8 @@ test_movie_predictions <- function(pred_mat, test_UI){
 test_MS_predictions <- function(pred_mat, test_UI){
   
   ## Calculates the rank score of Microsoft Predictions
-  ##
-  ## inputs: pred_mat: matrix of predicted interest
-  ##         test_UI: UI matrix of test MS data
+  ## Inputs: pred_mat - matrix of predicted interest
+  ##         test_UI  - UI matrix of test MS data
   
   d <- 0.03 # Threshold for entry into ranking
   a <- 5 # Half Life for expected view chance
