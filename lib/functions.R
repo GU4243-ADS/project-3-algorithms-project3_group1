@@ -75,7 +75,7 @@ movie_data_transform <- function(movie) {
   return(UI)
 }  
 
-calc_weight <- function(data, method = "pearson", c1 = 0.8, c2 = 0.8) {
+calc_weight <- function(data, method = "pearson") {
   
   ## Calculate similarity weight matrix
   ## Input: data    - movie data or MS data in user-item matrix form
