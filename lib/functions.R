@@ -140,7 +140,7 @@ calc_weight <- function(data, method = "pearson") {
         outA <- sum(rowA, na.rm = TRUE)
         outB <- sum(rowB, na.rm = TRUE)
         common <- rowA == 1 & rowB == 1
-        k <- sum(common)
+        k <- sum(common, na.rm = TRUE)
         
         sim_users <- seq(0.001, 1, 0.001)
         
