@@ -1,17 +1,17 @@
 
-###################################################################
-### Memory-based Collaborative Filtering Algorithm Starter Code ###
-###################################################################
+######################################################
+### Memory-based Collaborative Filtering Algorithm ###
+######################################################
 
-### Authors: CIndy Rush
 ### Project 3
 ### ADS Spring 2018
+### Group 1
+
 
 
 ########################################################
 ######## Building the UI matrix for the MS Data ########
 ########################################################
-
 
 setwd("/Users/cynthiarush/Dropbox/ADS_Spring_2018/Project3/Class2")
 source("functions.R")
