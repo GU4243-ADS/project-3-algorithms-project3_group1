@@ -25,3 +25,6 @@ Similarity Weight Matrix
 - Entropy
 
 - SimRank
+
+    + MS
+    + eachmovie
