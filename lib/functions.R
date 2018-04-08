@@ -75,7 +75,7 @@ movie_data_transform <- function(movie) {
   return(UI)
 }  
 
-calc_weight <- function(data, method = "pearson") {
+calc_weight <- function(data, method = "pearson", c1 = 0.8, c2 = 0.8) {
   
   ## Calculate similarity weight matrix
   ## Input: data    - movie data or MS data in user-item matrix form
@@ -98,21 +98,29 @@ calc_weight <- function(data, method = "pearson") {
       if (method == 'pearson') {
         return(cor(rowA[joint_values], rowB[joint_values], method = 'pearson'))
       }
+      if (method == 'spearman') {
+      }
+      if (method == 'vector') {
+      }
+      if (method == 'entropy')  {
+      }
+      if (method == 'msd')  {
+      }
+      if (method == 'simrank') {
+      }
     }
   }
   
-  # Loops over the rows and calculate sall similarities using weight_func
+  # Loop over the rows and calculate all similarities using weight_func
   for(i in 1:nrow(data)) {
     weight_mat[i, ] <- apply(data, 1, weight_func, data[i, ])
     print(i)
   }
+  if (method == 'simrank')  {
+    diag(weight_mat) <- 1
+  }
   return(round(weight_mat, 4))
 }
-
-
-
-
-
 
 pred_matrix <- function(data, simweights) {
   
