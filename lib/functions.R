@@ -130,10 +130,10 @@ calc_weight <- function(data, method = "pearson") {
       }
       if (method == 'simrank') {
         if (any(rowA > 1)) {
-          rowA[rowA < 4] <- 0
-          rowA[rowA > 3] <- 1
-          rowB[rowB < 4] <- 0
-          rowB[rowB > 3] <- 1
+          rowA[rowA == 4 & rowA == 5 & rowA == 6] <- 1
+          rowA[rowA == 3 & rowA == 2 & rowA == 1] <- 0
+          rowB[rowB == 4 & rowB == 5 & rowB == 6] <- 1
+          rowB[rowB == 3 & rowB == 2 & rowB == 1] <- 0
         }    
         c1 <- 0.8
         c2 <- 0.8
