@@ -39,8 +39,21 @@ save(movie_UI, file = "movie_UI.RData")
 
 ### Calculate the full weights on each data
 
-movie_sim <- calc_weight(movie_UI)
-save(movie_sim, file= "movie_sim.RData")
+# Movie data
+movie_sim_pearson <- calc_weight(movie_UI, method = "pearson")
+save(movie_sim_pearson, file= "movie_sim_pearson.RData")
+
+movie_sim_psig <- calc_weight(movie_UI, method = "psig")
+save(movie_sim_psig, file= "movie_sim_psig.RData")
+
+movie_sim_pvar <- calc_weight(movie_UI, method = "pvar")
+save(movie_sim_pvar, file= "movie_sim_pvar.RData")
+
+movie_sim_spearman <- calc_weight(movie_UI, method = "spearman")
+save(movie_sim_spearman, file= "movie_sim_spearman.RData")
+
+movie_sim_simrink <- calc_weight(movie_UI, method = "simrink")
+save(movie_sim_simrink, file= "movie_sim_simrink.RData")
 
 
 # Calculate the full weights on the MS data
