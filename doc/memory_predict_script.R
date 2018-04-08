@@ -52,15 +52,43 @@ save(movie_sim_pvar, file= "movie_sim_pvar.RData")
 movie_sim_spearman <- calc_weight(movie_UI, method = "spearman")
 save(movie_sim_spearman, file= "movie_sim_spearman.RData")
 
-movie_sim_simrink <- calc_weight(movie_UI, method = "simrink")
-save(movie_sim_simrink, file= "movie_sim_simrink.RData")
+movie_sim_vector <- calc_weight(movie_UI, method = "vector")
+save(movie_sim_vector, file= "movie_sim_vector.RData")
 
+movie_sim_entropy <- calc_weight(movie_UI, method = "entropy")
+save(movie_sim_entropy, file= "movie_sim_entropy.RData")
 
-# Calculate the full weights on the MS data
-# The below took 30 minutes on my Macbook and 14 on my iMac
+movie_sim_msd <- calc_weight(movie_UI, method = "msd")
+save(movie_sim_msd, file= "movie_sim_msd.RData")
 
-MS_sim <- calc_weight(MS_UI)
-save(MS_sim, file = "MS_sim.RData")
+movie_sim_simrank <- calc_weight(movie_UI, method = "simrank")
+save(movie_sim_simrank, file= "movie_sim_simrank.RData")
+
+# MS data
+
+MS_sim_pearson <- calc_weight(MS_UI, method = "pearson")
+save(MS_sim_pearson, file= "MS_sim_pearson.RData")
+
+MS_sim_psig <- calc_weight(MS_UI, method = "psig")
+save(MS_sim_psig, file= "MS_sim_psig.RData")
+
+MS_sim_pvar <- calc_weight(MS_UI, method = "pvar")
+save(MS_sim_pvar, file= "MS_sim_pvar.RData")
+
+MS_sim_spearman <- calc_weight(MS_UI, method = "spearman")
+save(MS_sim_spearman, file= "MS_sim_spearman.RData")
+
+MS_sim_vector <- calc_weight(MS_UI, method = "vector")
+save(MS_sim_vector, file= "MS_sim_vector.RData")
+
+MS_sim_entropy <- calc_weight(MS_UI, method = "entropy")
+save(MS_sim_entropy, file= "MS_sim_entropy.RData")
+
+MS_sim_msd <- calc_weight(MS_UI, method = "msd")
+save(MS_sim_msd, file= "MS_sim_msd.RData")
+
+MS_sim_simrank <- calc_weight(MS_UI, method = "simrank")
+save(MS_sim_simrank, file= "MS_sim_simrank.RData")
 
 # Calculate predictions for MS
 # This calculation took me 15 minutes
