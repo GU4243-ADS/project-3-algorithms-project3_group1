@@ -129,6 +129,22 @@ calc_weight <- function(data, method = "pearson") {
         return(mean((rowA - rowB)^2))
       }
       if (method == 'simrank') {
+        c1 <- 0.8
+        c2 <- 0.8
+        outA <- sum(rowA, na.rm = TRUE)
+        outB <- sum(rowB, na.rm = TRUE)
+        
+        sim_users <- seq(0.001, 1, 0.001)
+        
+        for (i in 1:length(sim_users)) {
+          sim_items <- k + (outA - k)*(outB - k)*(c2 * sim_users[i]) + 
+            ((outA * outB) - k - (outA - k)*(outB - k))*(c2/2 * (1 + sim_users[i]))
+          sim_user <- (c1 / (outA * outB)) * sim_items
+          if (abs(sim_user - sim_users[i]) < 0.001) {
+            return(sim_user)
+            break
+          }
+        }
       }
     }
   }
