@@ -1,9 +1,10 @@
 # Project 3: Algorithm Implementation and Evaluation
 ### Output folder
 
-MS UI Matrix (link)
+- User-Item Matrices
 
-eachmovie UI Matrix (link)
+    + MS (link)
+    + eachmovie (link)
 
 Similarity Weight Matrix
 
