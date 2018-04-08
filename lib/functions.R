@@ -150,7 +150,7 @@ calc_weight <- function(data, method = "pearson") {
           sim2 <- (c1 / (outA * outB)) * sim_items
           if (abs(sim1 - sim2) < 0.001) { break }
         }
-        return(sim_user)
+        return(sim2)
       }
     }
   }
