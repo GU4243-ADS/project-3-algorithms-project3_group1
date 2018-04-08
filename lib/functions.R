@@ -107,10 +107,10 @@ calc_weight <- function(data, method = "pearson") {
       }
       if (method == 'pvar') {
         variances <- apply(data, 2, var, na.rm = TRUE)
-        var.min <- min(variances)
-        var.max <- max(variances)
+        var.min <- min(variances, na.rm = TRUE)
+        var.max <- max(variances, na.rm = TRUE)
         var.weight <- (variances - var.min) / (var.max - var.min)
-        return(wtd.cor(rowA[joint_values], rowB[joint_values], weight = var.weight))
+        return(wtd.cor(rowA[joint_values], rowB[joint_values], weight = var.weight[joint_values]))
       }
       if (method == 'psigvar')  {
       }
