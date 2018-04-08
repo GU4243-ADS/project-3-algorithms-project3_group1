@@ -129,7 +129,7 @@ calc_weight <- function(data, method = "pearson") {
         return(mean((rowA - rowB)^2))
       }
       if (method == 'simrank') {
-        if (any(rowA > 1) {
+        if (any(rowA > 1)) {
           rowA[rowA < 4] <- 0
           rowA[rowA > 3] <- 1
           rowB[rowB < 4] <- 0
@@ -139,6 +139,8 @@ calc_weight <- function(data, method = "pearson") {
         c2 <- 0.8
         outA <- sum(rowA, na.rm = TRUE)
         outB <- sum(rowB, na.rm = TRUE)
+        common <- rowA == 1 & rowB == 1
+        k <- sum(common)
         
         sim_users <- seq(0.001, 1, 0.001)
         
