@@ -3,8 +3,8 @@
 
 User-Item Matrices
 
-    + MS (link)
-    + eachmovie (link)
++ MS (link)
++ eachmovie (link)
 
 Similarity Weight Matrix
 
