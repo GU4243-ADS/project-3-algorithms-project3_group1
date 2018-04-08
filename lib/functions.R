@@ -171,7 +171,7 @@ pred_matrix <- function(data, simweights) {
   return(pred_mat, n_preds)
 }
 
-test_movie_predictions <- function(pred_mat, test_UI, n_preds){
+test_movie_predictions <- function(pred_mat, test_UI){
   
   ## Calculates the Mean Absolute Error (MAE) of the movie predictions
   ##
