@@ -1,13 +1,13 @@
 # A simplification of memory_based_model.R
 
 # Path of functions.R
-setwd("~/STAT4243/project-3-algorithms-project3_group1/lib")
+setwd("/Users/Ayano/Documents/GitHub/project-3-algorithms-project3_group1//lib")
 source("functions.R")
 
 ### Builds UI Matrix for MS dataset
 
 # Path of MS dataset
-setwd("~/STAT4243/project-3-algorithms-project3_group1/data/MS_sample")
+setwd("../data/MS_sample")
 
 # Load the data
 MS_train <- read.csv("data_train.csv", as.is = TRUE, header = TRUE)
@@ -23,7 +23,7 @@ save(MS_UI, file = "MS_UI.RData")
 ### Build the UI Matrix for Movie Dataset
 
 # Path of Movie Dataset
-setwd("~/STAT4243/project-3-algorithms-project3_group1/data/eachmovie_sample")
+setwd("/Users/Ayano/Documents/GitHub/project-3-algorithms-project3_group1/data/eachmovie_sample")
 
 # Load the data
 movie_train <- read.csv("data_train.csv", as.is = TRUE, header = TRUE)
@@ -38,14 +38,14 @@ save(movie_UI, file = "movie_UI.RData")
 # Calculate the full weights on the movie data
 # The below took 87 minutes on my Macbook, 35 on my iMac
 
-movie_sim <- calc_weight(movie_UI, method = "pearson")
+movie_sim <- calc_weight(movie_UI, method = "spearman")
 save(movie_sim, file= "movie_sim.RData")
 
 
 # Calculate the full weights on the MS data
 # The below took 30 minutes on my Macbook and 14 on my iMac
 
-MS_sim <- calc_weight(MS_UI, method = "pearson")
+MS_sim <- calc_weight(MS_UI, method = "spearman")
 save(MS_sim, file = "MS_sim.RData")
 
 # Calculate predictions for MS

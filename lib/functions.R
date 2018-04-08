@@ -111,19 +111,13 @@ calc_weight <- function(data, method) {
     joint_values <- !is.na(rowA) & !is.na(rowB)
     if (sum(joint_values) == 0) {
       return(0)
-    } else {
-      if (method == 'pearson') {
+    } else if (method == 'pearson') {
         return(cor(rowA[joint_values], rowB[joint_values], method = 'pearson'))
-      }
-    } else {
-      if (method == 'spearman') {
+    } else if (method == 'spearman') {
         return(cor(rowA[joint_values], rowB[joint_values], method = 'spearman'))
-      }
-    } else {
-      if (method == 'vector') {
+    } else if (method == 'vector') {
         return(cosine(rowA[joint_values], rowB[joint_values]))
-      }
-    }  
+    }
   }
   
   # Loops over the rows and calculate sall similarities using weight_func
