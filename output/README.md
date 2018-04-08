@@ -3,10 +3,10 @@
 
 User-Item Matrices
 
-+ MS (link)
++ MS (https://drive.google.com/open?id=1PfgcdauRd0s5I4_ugsqT4t_cLXEqrXYO)
 + eachmovie (link)
 
-Similarity Weight Matrix
+Similarity Weight Matrices
 
 - Pearson: MS (link) and eachmovie (link)
 
