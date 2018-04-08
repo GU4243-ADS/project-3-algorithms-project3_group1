@@ -105,8 +105,13 @@ calc_weight <- function(data, method = "pearson") {
         return(cosine(rowA[joint_values], rowB[joint_values]))
       }
       if (method == 'entropy')  {
+        library(entropy)
+        rowA[rowA == 0] <- 0.000001
+        rowB[rowB == 0] <- 0.000001
+        return(KL.empirical(rowA,rowB))
       }
       if (method == 'msd')  {
+        return(mean((rowA - rowB)^2))
       }
       if (method == 'simrank') {
       }
