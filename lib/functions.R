@@ -106,7 +106,7 @@ calc_weight <- function(data, method = "pearson") {
         }
       }
       if (method == 'pvar') {
-        variances <- apply(data[, joint_values], 2, var, na.rm = TRUE)
+        variances <- apply(data, 2, var, na.rm = TRUE)
         var.min <- min(variances)
         var.max <- max(variances)
         var.weight <- (variances - var.min) / (var.max - var.min)
