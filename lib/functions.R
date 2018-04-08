@@ -99,7 +99,11 @@ calc_weight <- function(data, method = "pearson") {
         return(cor(rowA[joint_values], rowB[joint_values], method = 'pearson'))
       }
       if (method == 'psig') {
-        
+        if (sum(joint_values) < 50) {
+          return(sum(joint_values)/50 * cor(rowA[joint_values], rowB[joint_values], method = 'pearson'))
+        } else  {
+          return(cor(rowA[joint_values], rowB[joint_values], method = 'pearson'))
+        }
       }
       if (method == 'pvar') {
       }
