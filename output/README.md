@@ -5,7 +5,6 @@
 + eachmovie UI Matrix (link)
 
 + Similarity Weight Matrix
-++ Pearson: MS (link) and eachmovie (link)
-++ Pearson with significance weighting: MS (link) and eachmovie (link)
-++ Pearson with variance weighting: MS (link) and eachmovie (link)
-++ 
+Pearson: MS (link) and eachmovie (link)
+Pearson with significance weighting: MS (link) and eachmovie (link)
+Pearson with variance weighting: MS (link) and eachmovie (link) 
