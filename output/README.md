@@ -35,8 +35,8 @@ Similarity Weight Matrices
 
 - Mean Sq. Difference
 
-    + MS (https://drive.google.com/file/d/1jKkJ24xnJNUIio7IqYlRFkqQPXmusP3b/view?usp=sharing
-    + eachmovie (https://drive.google.com/file/d/18piI2QuSMVyTdCO44NjIPmnnQYmLXT51/view?usp=sharing)
+    + MS (https://drive.google.com/file/d/1U_o9wY7shtHfc-cfu88OpOgql34vo6Bu/view?usp=sharing
+    + eachmovie (https://drive.google.com/file/d/1jKkJ24xnJNUIio7IqYlRFkqQPXmusP3b/view?usp=sharing
 
 - Entropy
     
@@ -77,8 +77,8 @@ Prediction Matrices
 
 - Mean Sq. Difference
 
-    + MS (
-    + eachmovie (
+    + MS (https://drive.google.com/file/d/1jKkJ24xnJNUIio7IqYlRFkqQPXmusP3b/view?usp=sharing
+    + eachmovie ( https://drive.google.com/file/d/1jryDIeKrx0-3pSi9UvFz6xlN0uzzU8bI/view?usp=sharing
 
 - Entropy
     
