@@ -10,6 +10,16 @@
 
 ### Task 1. Model-based vs. Memory-based Algorithms
 
+Evaluation
+
+- Movie dataset: Mean Absolute Error (MAE) as suggested in class
+
+- Microsoft Dataset: Rank score as Expected Utility:
+
+	+ Utility as excess predicted preference (from 0 to 1-d) over the probability it is visited (modeled as exponential decay)
+
+	+To discount contribution by training data, only users and attribute IDs present in the testing dataset are used, so values tend to be smaller than usual calculations
+
 ### Result
 
 						MAE (Movie data)		Rank Score (MS data)
