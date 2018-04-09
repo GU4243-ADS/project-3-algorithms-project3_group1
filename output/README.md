@@ -25,7 +25,7 @@ Similarity Weight Matrices
 
 - Spearman
 
-    + MS (Juho)
+    + MS (https://drive.google.com/file/d/1aAfbXwTUjI0kq-FHf4zWgM-VyTVnwlRi/view?usp=sharing)
     + eachmovie (Ayano)
 
 - Vector Similiarity
