@@ -10,10 +10,16 @@
 
 ### Task 1. Model-based vs. Memory-based Algorithms
 
+Model-based Algorithm
+
+- 10-fold cross-validation for best number of clusters from 2 to 12
+- Use the ranking score as the evaluation metric
+- Apply the best number of cluster in test data
+- Acquired ranking score of 39.35477, with whole time cost more than 2 hours
+
 Evaluation
 
 - Movie dataset: Mean Absolute Error (MAE) as suggested in class
-
 - Microsoft Dataset: Rank score as Expected Utility:
 
 	+ Utility as excess predicted preference (from 0 to 1-d) over the probability it is visited (modeled as exponential decay)
