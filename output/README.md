@@ -58,7 +58,7 @@ Prediction Matrices
 - Pearson with significance weighting
 
     + MS (https://drive.google.com/file/d/1XJC49Vn56dro04vOZFHfoeuEhR-EdKsi/view?usp=sharing)
-    + eachmovie (
+    + eachmovie (Juho)
 
 - Pearson with variance weighting
 
