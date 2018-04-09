@@ -40,7 +40,7 @@ Similarity Weight Matrices
 
 - Entropy
     
-    + MS (Juho)
+    + MS (https://drive.google.com/file/d/1lK_ahLZaWO5D7sRgD4gnLhZk0yP_o6vv/view?usp=sharing)
     + eachmovie (Juho)
 
 - SimRank
