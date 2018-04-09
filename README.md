@@ -25,10 +25,10 @@ We also tested two different ways to weigh correlation based on the methods sugg
 
 ### Result
 
-									MAE (Movie data)		Rank Score (MS data)
-	Pearson								1.09					26.89
-	Pearson w/ Sig Weighting			1.10					26.89
-	Pearson w/ Var Weighting			1						26.3
+						MAE (Movie data)		Rank Score (MS data)
+	Pearson					1.09				26.89
+	Pearson w/ Sig Weighting		1.10				26.89
+	Pearson w/ Var Weighting		1				26.3
 
 With our implementation, we didn't see any significant improvement in performance. It is possible that for significance weighting, we may need a better measure than the mere number of co-rated items, as the ratings for such items could diverge significantly. The paper suggests significance weighting with Spearman correlation yielded significant improvement, which we didn't experiment in this project. Variance weighting, as already suggested, showed similar result.
 
