@@ -1,7 +1,6 @@
 ## Project 3: Algorithm Implementation and Evaluation
 
-Term: Spring 2018
-
++ Term: Spring 2018
 + Project title: Implementation and Evaluation of Collaborative Filtering Algorithms
 + Team Number: Group 1
 + Team Members: Mingkai Deng, Mao Guan, Ayano Kase, Juho Ma, Cindy Xu
