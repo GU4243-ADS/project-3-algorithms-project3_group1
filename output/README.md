@@ -6,47 +6,36 @@
 + MS (https://drive.google.com/open?id=1PfgcdauRd0s5I4_ugsqT4t_cLXEqrXYO)
 + eachmovie (https://drive.google.com/open?id=1nHdRkfs0GX8vfz6_-nxq5Uy0vcW1cYUT)
 
-Similarity Weight Matrices
+### MS Data
 
-- Pearson
++ Similarity Weight Matrices
+    - Pearson https://drive.google.com/file/d/1Ca1AMKovwKUG-ZxW7WrhthJtz067Ky85/view?usp=sharing
+    - Pearson w/ significance weighting https://drive.google.com/file/d/1xFV6gkYkrv9v0F6NEOZ9X3uRMLj-zx1D/view?usp=sharing
+    - Pearson w/ variance weighting https://drive.google.com/file/d/1xsDq54N-nZy-Ck7pdGQPFT4Q3p6Cl6rn/view?usp=sharing
+    - Spearman https://drive.google.com/file/d/1aAfbXwTUjI0kq-FHf4zWgM-VyTVnwlRi/view?usp=sharing
+    - Vector similiarity https://drive.google.com/file/d/1JFeWetkRU49WRmAtn_xP82U1vgAB8f0d/view?usp=sharing
+    - Mean squared difference https://drive.google.com/file/d/1U_o9wY7shtHfc-cfu88OpOgql34vo6Bu/view?usp=sharing
+    - Entropy https://drive.google.com/file/d/1lK_ahLZaWO5D7sRgD4gnLhZk0yP_o6vv/view?usp=sharing
+    - SimRank https://drive.google.com/file/d/1Lx7vtnzH64TnxsZYx3rTlvcygXitNoBJ/view?usp=sharing
 
-    + MS (https://drive.google.com/file/d/1Ca1AMKovwKUG-ZxW7WrhthJtz067Ky85/view?usp=sharing)
-    + eachmovie (https://drive.google.com/file/d/11SfP4cTbuLvjARuSQGGbBrs6pXuFVdQ8/view?usp=sharing)
++ Prediction Matrices
 
-- Pearson with significance weighting
+### Movie Data
 
-    + MS (https://drive.google.com/file/d/1xFV6gkYkrv9v0F6NEOZ9X3uRMLj-zx1D/view?usp=sharing)
-    + eachmovie (https://drive.google.com/file/d/1ku1cNQ6RoB7Uusdg_0YFTFrTBfu4M2um/view?usp=sharing)
++ Similarity Weight Matrices
+    - Pearson https://drive.google.com/file/d/11SfP4cTbuLvjARuSQGGbBrs6pXuFVdQ8/view?usp=sharing
+    - Pearson w/ significance weighting https://drive.google.com/file/d/1ku1cNQ6RoB7Uusdg_0YFTFrTBfu4M2um/view?usp=sharing
+    - Pearson with variance weighting https://drive.google.com/file/d/1I1yygrzwGVDcYfaW-uYWDu9EbgWo3mzn/view?usp=sharing
+    - Spearman
+    - Vector Similiarity
+    - Mean Sq. Difference https://drive.google.com/file/d/18piI2QuSMVyTdCO44NjIPmnnQYmLXT51/view?usp=sharing
+    - Entropy
+    - SimRank https://drive.google.com/file/d/1pdth5R8PEyU69EXN2m6NNxBCD0KclLow/view?usp=sharing
 
-- Pearson with variance weighting
++ Prediction Matrices
 
-    + MS (https://drive.google.com/file/d/1xsDq54N-nZy-Ck7pdGQPFT4Q3p6Cl6rn/view?usp=sharing)
-    + eachmovie (https://drive.google.com/file/d/1I1yygrzwGVDcYfaW-uYWDu9EbgWo3mzn/view?usp=sharing)
 
-- Spearman
 
-    + MS (https://drive.google.com/file/d/1aAfbXwTUjI0kq-FHf4zWgM-VyTVnwlRi/view?usp=sharing)
-    + eachmovie (Ayano)
-
-- Vector Similiarity
-
-    + MS (https://drive.google.com/file/d/1JFeWetkRU49WRmAtn_xP82U1vgAB8f0d/view?usp=sharing)
-    + eachmovie (
-
-- Mean Sq. Difference
-
-    + MS (https://drive.google.com/file/d/1U_o9wY7shtHfc-cfu88OpOgql34vo6Bu/view?usp=sharing)
-    + eachmovie (https://drive.google.com/file/d/18piI2QuSMVyTdCO44NjIPmnnQYmLXT51/view?usp=sharing)
-
-- Entropy
-    
-    + MS (https://drive.google.com/file/d/1lK_ahLZaWO5D7sRgD4gnLhZk0yP_o6vv/view?usp=sharing)
-    + eachmovie (Juho)
-
-- SimRank
-
-    + MS (https://drive.google.com/file/d/1Lx7vtnzH64TnxsZYx3rTlvcygXitNoBJ/view?usp=sharing)
-    + eachmovie (https://drive.google.com/file/d/1pdth5R8PEyU69EXN2m6NNxBCD0KclLow/view?usp=sharing)
 
 Prediction Matrices
 
