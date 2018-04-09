@@ -8,7 +8,7 @@
 
 + Project summary: In this project, we implemented and evaluated different collaborative filtering algorithms of two types: memory-based and model-based. For memory-based model, we also considered possible variations in implementation, with varying methods of weighting (significance and variance weighting) and correlation/similarity measures (Pearson, Spearman, Vector Similarity, Entropy, Mean Squared Difference, and SimRank).
 
-### Summary
+### Result
 
 ### Contribution Statement
 
@@ -17,13 +17,13 @@
 + Mingkai Deng
 
 + Mao Guan
-  + Implemented model-based algorithm
+  - Implemented model-based algorithm
   
 + Ayano Kase
-  + Implemented Spearman correlation and vector similarity measure.
+  - Implemented Spearman correlation and vector similarity measure.
 
 + Juho Ma
-  + Implemented SimRank measure and significance and variance weighting of Pearson correlation.
+  - Implemented SimRank measure and significance and variance weighting of Pearson correlation.
 
 + Cindy Xu
 
