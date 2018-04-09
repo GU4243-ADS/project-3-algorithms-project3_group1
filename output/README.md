@@ -19,62 +19,33 @@
     - SimRank https://drive.google.com/file/d/1Lx7vtnzH64TnxsZYx3rTlvcygXitNoBJ/view?usp=sharing
 
 + Prediction Matrices
+    - Pearson https://drive.google.com/file/d/1lP2DD6oxAqNJczWFA6CIezCeh-bB5ySl/view?usp=sharing
+    - Pearson w/ significance weighting https://drive.google.com/file/d/1XJC49Vn56dro04vOZFHfoeuEhR-EdKsi/view?usp=sharing
+    - Pearson w/ variance weighting (Mingkai)
+    - Spearman https://drive.google.com/file/d/1E5fWpo2QZ0UY7KP8WzR_ytaEfk3tMpCB/view?usp=sharing
+    - Vector similiarity
+    - Mean Squared difference https://drive.google.com/file/d/1jKkJ24xnJNUIio7IqYlRFkqQPXmusP3b/view?usp=sharing
+    - Entropy https://drive.google.com/file/d/1BJ-4cofHzY3gSr5ZgA1zjntHusj-NmJH/view?usp=sharing
+    - SimRank https://drive.google.com/file/d/1HjyRUlpBfXycAkqYVXcF88focitCDatc/view?usp=sharing
 
 ### Movie Data
 
 + Similarity Weight Matrices
     - Pearson https://drive.google.com/file/d/11SfP4cTbuLvjARuSQGGbBrs6pXuFVdQ8/view?usp=sharing
     - Pearson w/ significance weighting https://drive.google.com/file/d/1ku1cNQ6RoB7Uusdg_0YFTFrTBfu4M2um/view?usp=sharing
-    - Pearson with variance weighting https://drive.google.com/file/d/1I1yygrzwGVDcYfaW-uYWDu9EbgWo3mzn/view?usp=sharing
+    - Pearson w/ variance weighting https://drive.google.com/file/d/1I1yygrzwGVDcYfaW-uYWDu9EbgWo3mzn/view?usp=sharing
     - Spearman
-    - Vector Similiarity
-    - Mean Sq. Difference https://drive.google.com/file/d/18piI2QuSMVyTdCO44NjIPmnnQYmLXT51/view?usp=sharing
+    - Vector similiarity
+    - Mean Squared difference https://drive.google.com/file/d/18piI2QuSMVyTdCO44NjIPmnnQYmLXT51/view?usp=sharing
     - Entropy
     - SimRank https://drive.google.com/file/d/1pdth5R8PEyU69EXN2m6NNxBCD0KclLow/view?usp=sharing
 
 + Prediction Matrices
-
-
-
-
-Prediction Matrices
-
-- Pearson
-
-    + MS (https://drive.google.com/file/d/1lP2DD6oxAqNJczWFA6CIezCeh-bB5ySl/view?usp=sharing)
-    + eachmovie (https://drive.google.com/file/d/1BFvAwq6w9HRqn_2GOeRui3SoG24iAXBD/view?usp=sharing)
-
-- Pearson with significance weighting
-
-    + MS (https://drive.google.com/file/d/1XJC49Vn56dro04vOZFHfoeuEhR-EdKsi/view?usp=sharing)
-    + eachmovie (https://drive.google.com/file/d/1AU_qf89P8BRMFMAp3EGTVTC5tJVgQOEO/view?usp=sharing)
-
-- Pearson with variance weighting
-
-    + MS (Mingkai)
-    + eachmovie (Mingkai)
-
-- Spearman
-
-    + MS (https://drive.google.com/file/d/1E5fWpo2QZ0UY7KP8WzR_ytaEfk3tMpCB/view?usp=sharing)
-    + eachmovie (
-
-- Vector Similiarity
-
-    + MS (
-    + eachmovie (
-
-- Mean Sq. Difference
-
-    + MS (https://drive.google.com/file/d/1jKkJ24xnJNUIio7IqYlRFkqQPXmusP3b/view?usp=sharing)
-    + eachmovie (https://drive.google.com/file/d/1jryDIeKrx0-3pSi9UvFz6xlN0uzzU8bI/view?usp=sharing)
-
-- Entropy
-    
-    + MS (
-    + eachmovie (
-
-- SimRank
-
-    + MS (https://drive.google.com/file/d/1HjyRUlpBfXycAkqYVXcF88focitCDatc/view?usp=sharing)
-    + eachmovie (https://drive.google.com/file/d/10l1v35jhrt4FmtYB92np_61LCW4ifK6W/view?usp=sharing)
+    - Pearson https://drive.google.com/file/d/1BFvAwq6w9HRqn_2GOeRui3SoG24iAXBD/view?usp=sharing
+    - Pearson w/ significance weighting https://drive.google.com/file/d/1AU_qf89P8BRMFMAp3EGTVTC5tJVgQOEO/view?usp=sharing
+    - Pearson w/ variance weighting
+    - Spearman
+    - Vector similiarity
+    - Mean squared difference https://drive.google.com/file/d/1jryDIeKrx0-3pSi9UvFz6xlN0uzzU8bI/view?usp=sharing    
+    - Entropy
+    - SimRank https://drive.google.com/file/d/10l1v35jhrt4FmtYB92np_61LCW4ifK6W/view?usp=sharing
