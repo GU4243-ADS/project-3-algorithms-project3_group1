@@ -6,6 +6,12 @@
 ### ADS Spring 2018
 ### Group 1
 
+### Install necessary packages
+install.packages("infotheo")
+install.package("weights")
+library(infotheo)
+library(weights)
+
 ### Set path for functions.R
 
 setwd("~/STAT4243/project-3-algorithms-project3_group1/lib")
