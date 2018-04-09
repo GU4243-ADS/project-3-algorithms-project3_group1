@@ -127,7 +127,7 @@ calc_weight <- function(data, method = "pearson") {
       }
       if (method == 'entropy')  {
         entropy <- entropy(rowA[joint_values])
-        cond.entropy <- entropy(rowA[joint_values], rowB[joint_values])
+        cond.entropy <- condentropy(rowA[joint_values], rowB[joint_values])
         return(entropy - cond.entropy)
       }
       if (method == 'msd')  {
