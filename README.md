@@ -21,7 +21,7 @@ Along with Pearson correlation, we tested several correlation/similarity measure
 						MAE (Movie data)		Rank Score (MS data)
 	Pearson					1.09				26.89
 	Spearman				1.09				26.89
-	Vector similarity							27.03
+	Vector similarity			1.10				27.03
 	Entropy					1.10				26.91
 	Mean square difference			1.10				27.14
 	SimRank					1.08				27.08
@@ -66,7 +66,9 @@ With our implementation, we didn't see any significant improvement in performanc
 	+ Slides, Main, ReadMe, and outputs documentation
 
 + Cindy Xu
-
+        + Entropy and Mean Square difference
+	+ Slides, ReadMe, and outputs documentation
+	+ Presentation
 + All
 
 	+ Similarity weight matrices and predict matrices
