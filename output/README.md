@@ -37,7 +37,7 @@
     - Spearman ##########
     - Vector similiarity ##########
     - Mean Square difference https://drive.google.com/file/d/18piI2QuSMVyTdCO44NjIPmnnQYmLXT51/view?usp=sharing
-    - Entropy ##########
+    - Entropy https://drive.google.com/file/d/1d1BlLgfYE8POZGEveWSzo-3wy_JsEpcI/view?usp=sharing
     - SimRank https://drive.google.com/file/d/1pdth5R8PEyU69EXN2m6NNxBCD0KclLow/view?usp=sharing
 
 + Prediction Matrices
