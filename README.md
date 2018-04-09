@@ -8,23 +8,29 @@
 
 + Project summary: In this project, we implemented and evaluated different collaborative filtering algorithms of two types: memory-based and model-based. For memory-based model, we also considered possible variations in implementation, with varying methods of weighting (significance and variance weighting) and correlation/similarity measures (Pearson, Spearman, Vector Similarity, Entropy, Mean Squared Difference, and SimRank).
 
-+ Result
+### Summary
 
-Contribution statement: [default](doc/a_note_on_contributions.md) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement.
+### Contribution Statement
+
+[default](doc/a_note_on_contributions.md) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement.
 
 + Mingkai Deng
 
 + Mao Guan
-
+  + Implemented model-based algorithm
+  
 + Ayano Kase
+  + Implemented Spearman correlation and vector similarity measure.
 
 + Juho Ma
+  + Implemented SimRank measure and significance and variance weighting of Pearson correlation.
 
 + Cindy Xu
 
 + All
+  + 
 
-References
+### References
 
 + Breese, J. S., Heckerman, D., & Kadie, C. (1998, July). Empirical analysis of predictive algorithms for collaborative filtering. In Proceedings of the Fourteenth conference on Uncertainty in artificial intelligence (pp. 43-52). Morgan Kaufmann Publishers Inc..
 
