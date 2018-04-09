@@ -8,9 +8,11 @@
 
 ### Install necessary packages
 install.packages("infotheo")
-install.package("boot")
+install.packages("boot")
+install.packages("lsa")
 library(infotheo)
 library(boot)
+library(lsa)
 
 ### Set path for functions.R
 setwd("~/STAT4243/project-3-algorithms-project3_group1/lib")
