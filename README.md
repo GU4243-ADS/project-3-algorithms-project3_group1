@@ -18,7 +18,7 @@ Evaluation
 
 	+ Utility as excess predicted preference (from 0 to 1-d) over the probability it is visited (modeled as exponential decay)
 
-	+To discount contribution by training data, only users and attribute IDs present in the testing dataset are used, so values tend to be smaller than usual calculations
+	+ To discount contribution by training data, only users and attribute IDs present in the testing dataset are used, so values tend to be smaller than usual calculations
 
 ### Result
 
