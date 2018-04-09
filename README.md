@@ -14,10 +14,19 @@
 
 ### Task 2. Correlation/Similarity Measures
 
+Along with Pearson correlation, we tested several correlation/similarity measurement methods to test their validity. As suggested by Herlocker et al., we tested Spearman, vector similarity, mean square difference, and entropy methods. Also included is SimRank which was suggested by Jeh and Widom. Refer to `functions.R` to see how each method is implemented.
+
 ### Result
-	Movie                         (MAE)	               MS (Rank Score)
 
+						MAE (Movie data)		Rank Score (MS data)
+	Pearson					1.09				26.89
+	Spearman				1.09				26.89
+	Vector similarity							27.03
+	Entropy									26.91
+	Mean square difference			1.1				27.14
+	SimRank					1.08				27.08
 
+As indicated in the paper, we also didn't see significant improvement in the performance for both datasets. Some measures (such as Entropy) was extremely inefficient compared to simple Pearson or Spearman method.
 
 ### Task 3. Significance and Variance Weighting
 
