@@ -10,8 +10,8 @@ Similarity Weight Matrices
 
 - Pearson
 
-    + MS (
-    + eachmovie (
+    + MS (Juho)
+    + eachmovie (Cindy)
 
 - Pearson with significance weighting
 
@@ -20,7 +20,7 @@ Similarity Weight Matrices
 
 - Pearson with variance weighting
 
-    + MS (
+    + MS (Juho)
     + eachmovie (https://drive.google.com/file/d/1I1yygrzwGVDcYfaW-uYWDu9EbgWo3mzn/view?usp=sharing)
 
 - Spearman
@@ -40,8 +40,8 @@ Similarity Weight Matrices
 
 - Entropy
     
-    + MS (
-    + eachmovie (
+    + MS (Juho)
+    + eachmovie (Juho)
 
 - SimRank
 
