@@ -12,6 +12,12 @@
 
 ### Result
 
+						MAE (Movie data)		Rank Score (MS data)
+	Model-based	Performance						39.35 (different method used)
+			Efficiency						2 hrs for 10-fold CV
+	Memory-based	Performance		1.09				26.89
+			Efficiency		2 hrs (sim) + 1 hr (pred)	15 min (sim) + ~15 min (pred)
+
 ### Task 2. Correlation/Similarity Measures
 
 Along with Pearson correlation, we tested several correlation/similarity measurement methods to test their validity. As suggested by Herlocker et al., we tested Spearman, vector similarity, mean square difference, and entropy methods. Also included is SimRank which was suggested by Jeh and Widom. Refer to `functions.R` to see how each method is implemented.
