@@ -11,7 +11,7 @@ Similarity Weight Matrices
 - Pearson
 
     + MS (https://drive.google.com/file/d/1jryDIeKrx0-3pSi9UvFz6xlN0uzzU8bI/view?usp=sharing)
-    + eachmovie (Cindy)
+    + eachmovie (Juho)
 
 - Pearson with significance weighting
 
