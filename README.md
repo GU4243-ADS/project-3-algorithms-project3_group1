@@ -59,14 +59,15 @@ With our implementation, we didn't see any significant improvement in performanc
 
 	+ Significance and Variance Weighting
 	+ SimRank
-	+ Slides, Main and ReadMe documentation, outputs
+	+ Slides, Main, ReadMe, and outputs documentation
 
 + Cindy Xu
 
 + All
 
 	+ Similarity weight matrices and predict matrices
-	
+
+
 ### References
 
 + Breese, J. S., Heckerman, D., & Kadie, C. (1998, July). Empirical analysis of predictive algorithms for collaborative filtering. In Proceedings of the Fourteenth conference on Uncertainty in artificial intelligence (pp. 43-52). Morgan Kaufmann Publishers Inc..
