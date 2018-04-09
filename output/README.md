@@ -1,4 +1,4 @@
-# Project 3: Algorithm Implementation and Evaluation
+## Project 3: Algorithm Implementation and Evaluation
 ### Output folder
 
 User-Item Matrices
