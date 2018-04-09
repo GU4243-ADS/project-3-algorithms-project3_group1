@@ -67,7 +67,7 @@ Prediction Matrices
 
 - Spearman
 
-    + MS (
+    + MS (Juho)
     + eachmovie (
 
 - Vector Similiarity
