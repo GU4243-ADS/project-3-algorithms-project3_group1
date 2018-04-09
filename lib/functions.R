@@ -131,7 +131,7 @@ calc_weight <- function(data, method = "pearson") {
         return(entropy - cond.entropy)
       }
       if (method == 'msd')  {
-        return(mean((rowA[joint_values] - rowB[joint_values])^2))
+        return(1/(mean((rowA[joint_values] - rowB[joint_values])^2)))
       }
       if (method == 'simrank') {
         if (any(rowA > 1)) {
