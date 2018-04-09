@@ -126,12 +126,10 @@ calc_weight <- function(data, method = "pearson") {
         return(cosine(rowA[joint_values], rowB[joint_values]))
       }
       if (method == 'entropy')  {
-        rowA[rowA == 0] <- 0.000001
-        rowB[rowB == 0] <- 0.000001
-        return(KL.empirical(rowA,rowB))
+        return(KL.empirical(rowA[joint_values],rowB[joint_values]))
       }
       if (method == 'msd')  {
-        return(mean((rowA - rowB)^2))
+        return(mean((rowA[joint_values] - rowB[joint_values])^2))
       }
       if (method == 'simrank') {
         if (any(rowA > 1)) {
@@ -184,7 +182,6 @@ pred_matrix <- function(data, simweights) {
   
   # Change MS entries from 0 to NA
   pred_mat[pred_mat == 0] <- NA
-  n_preds = sum(pred_mat == NA)
   
   row_avgs <- apply(data, 1, mean, na.rm = TRUE)
   
@@ -207,7 +204,7 @@ pred_matrix <- function(data, simweights) {
     print(i)
   }
   
-  return(pred_mat, n_preds)
+  return(pred_mat)
 }
 
 test_movie_predictions <- function(pred_mat, test_UI){
@@ -223,14 +220,13 @@ test_movie_predictions <- function(pred_mat, test_UI){
   return(MAE)
 }
 
-test_MS_predictions <- function(pred_mat, test_UI){
+test_MS_predictions <- function(pred_mat, test_UI, d=0.03, a=5){
   
   ## Calculates the rank score of Microsoft Predictions
   ## Inputs: pred_mat - matrix of predicted interest
   ##         test_UI  - UI matrix of test MS data
-  
-  d <- 0.03 # Threshold for entry into ranking
-  a <- 5 # Half Life for expected view chance
+  ##         d - Interest threshold for entry into ranking
+  ##         a - Half Life for expected view chance
   
   # Generates rankings from predicted preference strength
   f_rank <- function(x){rank(x, ties.method = 'first')}
