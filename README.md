@@ -54,7 +54,11 @@ With our implementation, we didn't see any significant improvement in performanc
 	
 + Mao Guan
 
-	+ Algorithm for model-based model
+	+ Model-based Model Training Implementation
+	+ Evaluation Method Implementation
+	+ Contribute to the README.md and Slides
+	+ Presentation
+	
   
 + Ayano Kase
 
