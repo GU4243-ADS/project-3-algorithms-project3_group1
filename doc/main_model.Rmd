@@ -8,10 +8,10 @@ First Part, Load the data from file folder and Tansform it into matrix.
 
 ```{r}
 movie_train <- read.csv("../data/eachmovie_sample/data_train.csv", as.is = TRUE, header = TRUE)
-movie_train = movie_train[, 2:4]
+#movie_train = movie_train[, 2:4]
 
 movie_test <- read.csv("../data/eachmovie_sample/data_test.csv", as.is = TRUE, header = TRUE)
-movie_test = movie_test[, 2:4]
+#movie_test = movie_test[, 2:4]
 
 Micro_train <- read.csv("../data/MS_sample/data_train.csv", as.is = TRUE, header = TRUE)
 Micro_train = Micro_train[, 2:4]
@@ -59,7 +59,7 @@ train_data2 <- movie_train
 
 ```{r}
 ################################################################
-######### Implematation of Expectation-Maximum Algorithm ########## 
+######### Implementation of Expectation-Maximum Algorithm ########## 
 ###############################################################
 
 
