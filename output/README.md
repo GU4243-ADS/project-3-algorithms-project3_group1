@@ -45,7 +45,7 @@
     - Pearson w/ significance weighting https://drive.google.com/file/d/1AU_qf89P8BRMFMAp3EGTVTC5tJVgQOEO/view?usp=sharing
     - Pearson w/ variance weighting ##########
     - Spearman https://drive.google.com/file/d/13PHUdF-tflwmM9AIvL4O6LgSK45e8gXw/view?usp=sharing
-    - Vector similiarity 
+    - Vector similiarity https://drive.google.com/file/d/1lLIi6UU-gMRAlJ4Cyf4xTaC6a_9hfQok/view?usp=sharing
     - Mean square difference https://drive.google.com/file/d/1jryDIeKrx0-3pSi9UvFz6xlN0uzzU8bI/view?usp=sharing    
     - Entropy https://drive.google.com/file/d/15k0rwMzjgHVVutHHtCK7wMLY0VGRjiTe/view?usp=sharing
     - SimRank https://drive.google.com/file/d/10l1v35jhrt4FmtYB92np_61LCW4ifK6W/view?usp=sharing
