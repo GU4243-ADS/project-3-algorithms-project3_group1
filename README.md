@@ -55,6 +55,10 @@ With our implementation, we didn't see any significant improvement in performanc
   
 + Ayano Kase
 
+	+ Coded and evaluated memory-based model with Spearman and vector similarity
+	+ Contributed to README.md
+	+ Contributed to presentation deck
+
 + Juho Ma
 
 	+ Significance and Variance Weighting
