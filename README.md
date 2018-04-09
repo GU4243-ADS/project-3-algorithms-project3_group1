@@ -17,18 +17,14 @@
 + Mingkai Deng
 
 + Mao Guan
-  - Implemented model-based algorithm
   
 + Ayano Kase
-  - Implemented Spearman correlation and vector similarity measure.
 
 + Juho Ma
-  - Implemented SimRank measure and significance and variance weighting of Pearson correlation.
 
 + Cindy Xu
 
 + All
-  + 
 
 ### References
 
