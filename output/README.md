@@ -14,7 +14,7 @@
     - Pearson w/ variance weighting https://drive.google.com/file/d/1xsDq54N-nZy-Ck7pdGQPFT4Q3p6Cl6rn/view?usp=sharing
     - Spearman https://drive.google.com/file/d/1aAfbXwTUjI0kq-FHf4zWgM-VyTVnwlRi/view?usp=sharing
     - Vector similiarity https://drive.google.com/file/d/1JFeWetkRU49WRmAtn_xP82U1vgAB8f0d/view?usp=sharing
-    - Mean squared difference https://drive.google.com/file/d/1U_o9wY7shtHfc-cfu88OpOgql34vo6Bu/view?usp=sharing
+    - Mean square difference https://drive.google.com/file/d/1U_o9wY7shtHfc-cfu88OpOgql34vo6Bu/view?usp=sharing
     - Entropy https://drive.google.com/file/d/1lK_ahLZaWO5D7sRgD4gnLhZk0yP_o6vv/view?usp=sharing
     - SimRank https://drive.google.com/file/d/1Lx7vtnzH64TnxsZYx3rTlvcygXitNoBJ/view?usp=sharing
 
@@ -24,7 +24,7 @@
     - Pearson w/ variance weighting ##########
     - Spearman https://drive.google.com/file/d/1E5fWpo2QZ0UY7KP8WzR_ytaEfk3tMpCB/view?usp=sharing
     - Vector similiarity ##########
-    - Mean Squared difference https://drive.google.com/file/d/1jKkJ24xnJNUIio7IqYlRFkqQPXmusP3b/view?usp=sharing
+    - Mean Square difference https://drive.google.com/file/d/1jKkJ24xnJNUIio7IqYlRFkqQPXmusP3b/view?usp=sharing
     - Entropy https://drive.google.com/file/d/1BJ-4cofHzY3gSr5ZgA1zjntHusj-NmJH/view?usp=sharing
     - SimRank https://drive.google.com/file/d/1HjyRUlpBfXycAkqYVXcF88focitCDatc/view?usp=sharing
 
@@ -36,7 +36,7 @@
     - Pearson w/ variance weighting https://drive.google.com/file/d/1I1yygrzwGVDcYfaW-uYWDu9EbgWo3mzn/view?usp=sharing
     - Spearman ##########
     - Vector similiarity ##########
-    - Mean Squared difference https://drive.google.com/file/d/18piI2QuSMVyTdCO44NjIPmnnQYmLXT51/view?usp=sharing
+    - Mean Square difference https://drive.google.com/file/d/18piI2QuSMVyTdCO44NjIPmnnQYmLXT51/view?usp=sharing
     - Entropy ##########
     - SimRank https://drive.google.com/file/d/1pdth5R8PEyU69EXN2m6NNxBCD0KclLow/view?usp=sharing
 
@@ -46,6 +46,6 @@
     - Pearson w/ variance weighting ##########
     - Spearman ##########
     - Vector similiarity ##########
-    - Mean squared difference https://drive.google.com/file/d/1jryDIeKrx0-3pSi9UvFz6xlN0uzzU8bI/view?usp=sharing    
+    - Mean square difference https://drive.google.com/file/d/1jryDIeKrx0-3pSi9UvFz6xlN0uzzU8bI/view?usp=sharing    
     - Entropy ##########
     - SimRank https://drive.google.com/file/d/10l1v35jhrt4FmtYB92np_61LCW4ifK6W/view?usp=sharing
