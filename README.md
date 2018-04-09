@@ -66,9 +66,11 @@ With our implementation, we didn't see any significant improvement in performanc
 	+ Slides, Main, ReadMe, and outputs documentation
 
 + Cindy Xu
-        + Entropy and Mean Square difference
+
+	+ Entropy and Mean Square difference
 	+ Slides, ReadMe, and outputs documentation
 	+ Presentation
+
 + All
 
 	+ Similarity weight matrices and predict matrices
