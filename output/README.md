@@ -10,7 +10,7 @@ Similarity Weight Matrices
 
 - Pearson
 
-    + MS (https://drive.google.com/file/d/1jryDIeKrx0-3pSi9UvFz6xlN0uzzU8bI/view?usp=sharing)
+    + MS https://drive.google.com/file/d/1Ca1AMKovwKUG-ZxW7WrhthJtz067Ky85/view?usp=sharing
     + eachmovie (Juho)
 
 - Pearson with significance weighting
