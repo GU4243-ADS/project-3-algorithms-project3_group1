@@ -8,9 +8,9 @@
 
 ### Install necessary packages
 install.packages("infotheo")
-install.package("weights")
+install.package("boot")
 library(infotheo)
-library(weights)
+library(boot)
 
 ### Set path for functions.R
 
