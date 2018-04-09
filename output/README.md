@@ -35,7 +35,7 @@
     - Pearson w/ significance weighting https://drive.google.com/file/d/1ku1cNQ6RoB7Uusdg_0YFTFrTBfu4M2um/view?usp=sharing
     - Pearson w/ variance weighting https://drive.google.com/file/d/1I1yygrzwGVDcYfaW-uYWDu9EbgWo3mzn/view?usp=sharing
     - Spearman ##########
-    - Vector similiarity ##########
+    - Vector similiarity https://drive.google.com/file/d/1tFMNF5D_gL543qmjLnipKm5Op5scB46u/view?usp=sharing
     - Mean Square difference https://drive.google.com/file/d/18piI2QuSMVyTdCO44NjIPmnnQYmLXT51/view?usp=sharing
     - Entropy https://drive.google.com/file/d/1d1BlLgfYE8POZGEveWSzo-3wy_JsEpcI/view?usp=sharing
     - SimRank https://drive.google.com/file/d/1pdth5R8PEyU69EXN2m6NNxBCD0KclLow/view?usp=sharing
@@ -45,7 +45,7 @@
     - Pearson w/ significance weighting https://drive.google.com/file/d/1AU_qf89P8BRMFMAp3EGTVTC5tJVgQOEO/view?usp=sharing
     - Pearson w/ variance weighting ##########
     - Spearman ##########
-    - Vector similiarity ##########
+    - Vector similiarity 
     - Mean square difference https://drive.google.com/file/d/1jryDIeKrx0-3pSi9UvFz6xlN0uzzU8bI/view?usp=sharing    
     - Entropy ##########
     - SimRank https://drive.google.com/file/d/10l1v35jhrt4FmtYB92np_61LCW4ifK6W/view?usp=sharing
