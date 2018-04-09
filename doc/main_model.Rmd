@@ -155,7 +155,6 @@ Pred <- function(data, gamma, mu, pi, items){
     }
   }
   
-  save(predictions, file = "../data/cluster_prediction.Rdata")
   return(predictions)
 }
 ```
@@ -203,7 +202,7 @@ cross_validation <- function(start = 3, end = 10, train_data) {
 cross_validation(start = 2, end = 16, train_data1)
 ```
 
-### From the cross validation results, we could see that the best C is xxx
+### From the cross validation results, we could see that the best C is 7
 
 ```{r}
 # Cross_validation accuracy is as follows with clusters from 2 to 12
@@ -242,6 +241,7 @@ Prob <- cluster_train$Prob
 items <- cluster_train$items
 
 Prediction <- Pred(test_data1, Gamma, Mu, Prob, items)
+save(Prediction, file = "../output/cluster_prediction.Rdata")
 score = rank_score( Prediction,  test_data1)
 score
 ```
