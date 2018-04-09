@@ -22,8 +22,8 @@ Along with Pearson correlation, we tested several correlation/similarity measure
 	Pearson					1.09				26.89
 	Spearman				1.09				26.89
 	Vector similarity							27.03
-	Entropy									26.91
-	Mean square difference			1.1				27.14
+	Entropy					1.10				26.91
+	Mean square difference			1.10				27.14
 	SimRank					1.08				27.08
 
 As indicated in the paper, we also didn't see significant improvement in the performance for both datasets. Some measures (such as Entropy) was extremely inefficient compared to simple Pearson or Spearman method.
