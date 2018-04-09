@@ -17,7 +17,7 @@ Similarity Weight Matrices
 
 - Pearson with variance weighting
 
-    + MS (https://drive.google.com/file/d/1uvFg0x3vn7cY52cxVqlPDPD2fl8qZ2Ak/view?usp=sharing)
+    + MS ()
     + eachmovie (link) 
 
 - Spearman
