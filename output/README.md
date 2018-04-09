@@ -20,7 +20,7 @@ Similarity Weight Matrices
 
 - Pearson with variance weighting
 
-    + MS (Juho)
+    + MS (https://drive.google.com/file/d/1xsDq54N-nZy-Ck7pdGQPFT4Q3p6Cl6rn/view?usp=sharing)
     + eachmovie (https://drive.google.com/file/d/1I1yygrzwGVDcYfaW-uYWDu9EbgWo3mzn/view?usp=sharing)
 
 - Spearman
