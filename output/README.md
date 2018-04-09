@@ -62,7 +62,7 @@ Prediction Matrices
 
 - Pearson with variance weighting
 
-    + MS (
+    + MS (https://drive.google.com/file/d/1lP2DD6oxAqNJczWFA6CIezCeh-bB5ySl/view?usp=sharing
     + eachmovie (
 
 - Spearman
