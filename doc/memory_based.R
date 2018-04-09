@@ -151,3 +151,22 @@ save(movie_pred_pearson, file = "movie_pred_pearson.RData")
 
 movie_pred_simrank <- pred_matrix(movie_UI, movie_sim_simrank)
 save(movie_pred_simrank, file = "movie_pred_simrank.RData")
+
+### Evaluate prediction matrix
+
+## MS test data
+
+setwd("~/STAT4243/project-3-algorithms-project3_group1/data/MS_sample")
+MS_test <- read.csv('data_test.csv', as.is = TRUE, header = TRUE)
+MS_test_UI <- MS_data_transform(MS_test)
+MS_score <- test_MS_predictions(MS_pred_pearson, MS_test_UI)
+sprintf('MS data achieves score of %.2f', MS_score)
+
+## Movie test data
+
+setwd("~/STAT4243/project-3-algorithms-project3_group1/data/eachmovie_sample")
+movie_test <- read.csv('data_test.csv', as.is = TRUE, header = TRUE)[,2:4]
+movie_test_UI <- movie_data_transform(movie_test)
+
+movie_MAE <- test_movie_predictions(movie_pred_pearson, movie_test_UI)
+sprintf('movie data achieves MAE of %.2f', movie_MAE)
