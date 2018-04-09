@@ -62,8 +62,8 @@ Prediction Matrices
 
 - Pearson with variance weighting
 
-    + MS (
-    + eachmovie (
+    + MS (Mingkai)
+    + eachmovie (Mingkai)
 
 - Spearman
 
