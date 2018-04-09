@@ -19,8 +19,9 @@ Micro_train = Micro_train[, 2:4]
 Micro_test <- read.csv("../data/MS_sample/data_test.csv",as.is = TRUE, header = TRUE)
 Micro_test = Micro_test[, 2:4]
 ```
-
-## Data Transformation
+####################################################
+############### Data Transformation ################
+####################################################
 Convert the original dataset to a matrix which rows represents users and columns represents items
 We used the data transform function provided by the course materials.
 
@@ -57,12 +58,10 @@ train_data2 <- movie_train
 ```
 
 ```{r}
+################################################################
+######### Implematation of Expectation-Maximum Algorithm ########## 
+###############################################################
 
-#Define the Expectation-Maximum Algorithm
-#This function constitute of three steps,
-#First Step-> Initialization of the Data
-#Second Step -> Expectation Step
-#Third Step -> Maximum Step
 
 EM_Train <- function(data, Clusters = 3, threshold = 0.1, Iterations = 150){
   User_Number <- ncol(data)
@@ -132,8 +131,10 @@ EM_Train <- function(data, Clusters = 3, threshold = 0.1, Iterations = 150){
 
 
 ```{r}
+##############################################################
+#########  Definition of  the  Prediction Function ###########
+##############################################################
 
-#Define the  Prediction Function
 Pred <- function(data, gamma, mu, pi, items){
   data[is.na(data)] <- 0
   item_test <- colnames(data)
@@ -163,9 +164,9 @@ Pred <- function(data, gamma, mu, pi, items){
 
 
 ```{r}
-# Choose the best cluster number
-
-# Separate the training data into two parts--training set and validation set
+###########################################################
+######### Cross Validation Function Definition ##############
+############################################################
 cross_validation <- function(start = 3, end = 10, train_data) {
      train_data = train_data1
      numberofCluster = start:end
@@ -248,7 +249,7 @@ score
 
 
 ### Now we could see that the rank_score of the ms data is 39.35477
-### The Time cost is 2 hours .
+### The Time cost of Cross Validation is 2 hours .
 
 
 
