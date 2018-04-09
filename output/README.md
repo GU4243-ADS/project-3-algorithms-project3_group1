@@ -21,7 +21,7 @@
 + Prediction Matrices
     - Pearson https://drive.google.com/file/d/1lP2DD6oxAqNJczWFA6CIezCeh-bB5ySl/view?usp=sharing
     - Pearson w/ significance weighting https://drive.google.com/file/d/1XJC49Vn56dro04vOZFHfoeuEhR-EdKsi/view?usp=sharing
-    - Pearson w/ variance weighting (Mingkai)
+    - Pearson w/ variance weighting
     - Spearman https://drive.google.com/file/d/1E5fWpo2QZ0UY7KP8WzR_ytaEfk3tMpCB/view?usp=sharing
     - Vector similiarity
     - Mean Squared difference https://drive.google.com/file/d/1jKkJ24xnJNUIio7IqYlRFkqQPXmusP3b/view?usp=sharing
