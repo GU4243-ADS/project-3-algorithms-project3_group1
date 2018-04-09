@@ -53,7 +53,7 @@ Prediction Matrices
 - Pearson
 
     + MS (
-    + eachmovie (
+    + eachmovie (Juho)
 
 - Pearson with significance weighting
 
