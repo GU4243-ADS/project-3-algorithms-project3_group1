@@ -17,8 +17,8 @@ Similarity Weight Matrices
 
 - Pearson with variance weighting
 
-    + MS ()
-    + eachmovie (link) 
+    + MS (
+    + eachmovie (
 
 - Spearman
 
@@ -27,6 +27,9 @@ Similarity Weight Matrices
 - Mean Sq. Difference
 
 - Entropy
+    
+    + MS (
+    + eachmovie (
 
 - SimRank
 
