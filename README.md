@@ -21,6 +21,8 @@
 
 ### Task 3. Significance and Variance Weighting
 
+We also tested two different ways to weigh correlation based on the methods suggested by Herlocker et al. Significance weighting takes into account the number of common ratings between two users in order to devalue those similarity weights based on a small number of co-rated items. As suggested in the paper, those with fewer than 50 co-rated items are weighted down by n/50. Variance weighting is a way to reflect the differences between items, with an idea that if the ratings are homogenous for an item, the significance of such ratings should be weighted down. We used the suggested normalization of variance weight as (variance - min(variance)) / max(variance).
+
 ### Result
 
 ### Contribution Statement
