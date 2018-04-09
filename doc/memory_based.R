@@ -101,51 +101,51 @@ save(movie_UI, file = "movie_UI.RData")
 # Calculate similarity matrices using each measure
 setwd("~/STAT4243/project-3-algorithms-project3_group1/output")
 
-movie_sim_pearson <- calc_weight(MS_UI, method = "pearson")
-save(MS_sim_pearson, file= "MS_sim_pearson.RData")
+movie_sim_pearson <- calc_weight(movie_UI, method = "pearson")
+save(movie_sim_pearson, file= "movie_sim_pearson.RData")
 
-MS_sim_psig <- calc_weight(MS_UI, method = "psig")
-save(MS_sim_psig, file= "MS_sim_psig.RData")
+movie_sim_psig <- calc_weight(movie_UI, method = "psig")
+save(movie_sim_psig, file= "movie_sim_psig.RData")
 
-MS_sim_pvar <- calc_weight(MS_UI, method = "pvar")
-save(MS_sim_pvar, file= "MS_sim_pvar.RData")
+movie_sim_pvar <- calc_weight(movie_UI, method = "pvar")
+save(movie_sim_pvar, file= "movie_sim_pvar.RData")
 
-MS_sim_spearman <- calc_weight(MS_UI, method = "spearman")
-save(MS_sim_spearman, file= "MS_sim_spearman.RData")
+movie_sim_spearman <- calc_weight(movie_UI, method = "spearman")
+save(movie_sim_spearman, file= "movie_sim_spearman.RData")
 
-MS_sim_vector <- calc_weight(MS_UI, method = "vector")
-save(MS_sim_vector, file= "MS_sim_vector.RData")
+movie_sim_vector <- calc_weight(movie_UI, method = "vector")
+save(movie_sim_vector, file= "movie_sim_vector.RData")
 
-MS_sim_entropy <- calc_weight(MS_UI, method = "entropy")
-save(MS_sim_entropy, file= "MS_sim_entropy.RData")
+movie_sim_entropy <- calc_weight(movie_UI, method = "entropy")
+save(movie_sim_entropy, file= "movie_sim_entropy.RData")
 
-MS_sim_msd <- calc_weight(MS_UI, method = "msd")
-save(MS_sim_msd, file= "MS_sim_msd.RData")
+movie_sim_msd <- calc_weight(movie_UI, method = "msd")
+save(movie_sim_msd, file= "movie_sim_msd.RData")
 
-MS_sim_simrank <- calc_weight(MS_UI, method = "simrank")
-save(MS_sim_simrank, file= "MS_sim_simrank.RData")
+movie_sim_simrank <- calc_weight(movie_UI, method = "simrank")
+save(movie_sim_simrank, file= "movie_sim_simrank.RData")
 
 # Calculate predictions for MS using each measure
-MS_pred_pearson <- pred_matrix(MS_UI, MS_sim_pearson)
-save(MS_pred_pearson, file = "MS_pred_pearson.RData")
+movie_pred_pearson <- pred_matrix(movie_UI, movie_sim_pearson)
+save(movie_pred_pearson, file = "movie_pred_pearson.RData")
 
-MS_pred_psig <- pred_matrix(MS_UI, MS_sim_psig)
-save(MS_pred_psig, file = "MS_pred_psig.RData")
+movie_pred_psig <- pred_matrix(movie_UI, movie_sim_psig)
+save(movie_pred_psig, file = "movie_pred_psig.RData")
 
-MS_pred_pvar <- pred_matrix(MS_UI, MS_sim_pvar)
-save(MS_pred_pvar, file = "MS_pred_pvar.RData")
+movie_pred_pvar <- pred_matrix(movie_UI, movie_sim_pvar)
+save(movie_pred_pvar, file = "movie_pred_pvar.RData")
 
-MS_pred_spearman <- pred_matrix(MS_UI, MS_sim_spearman)
-save(MS_pred_spearman, file = "MS_pred_spearman.RData")
+movie_pred_spearman <- pred_matrix(movie_UI, movie_sim_spearman)
+save(movie_pred_spearman, file = "movie_pred_spearman.RData")
 
-MS_pred_vector <- pred_matrix(MS_UI, MS_sim_vector)
-save(MS_pred_vector, file = "MS_pred_vector.RData")
+movie_pred_vector <- pred_matrix(movie_UI, movie_sim_vector)
+save(movie_pred_vector, file = "movie_pred_vector.RData")
 
-MS_pred_entropy <- pred_matrix(MS_UI, MS_sim_entropy)
-save(MS_pred_entropy, file = "MS_pred_entropy.RData")
+movie_pred_entropy <- pred_matrix(movie_UI, movie_sim_entropy)
+save(movie_pred_entropy, file = "movie_pred_entropy.RData")
 
-MS_pred_msd <- pred_matrix(MS_UI, MS_sim_msd)
-save(MS_pred_pearson, file = "MS_pred_pearson.RData")
+movie_pred_msd <- pred_matrix(movie_UI, movie_sim_msd)
+save(movie_pred_pearson, file = "movie_pred_pearson.RData")
 
-MS_pred_simrank <- pred_matrix(MS_UI, MS_sim_simrank)
-save(MS_pred_simrank, file = "MS_pred_simrank.RData")
+movie_pred_simrank <- pred_matrix(movie_UI, movie_sim_simrank)
+save(movie_pred_simrank, file = "movie_pred_simrank.RData")
