@@ -1,8 +1,4 @@
-# Spring2018
-
-# Project 3: Algorithm Implementation and Evaluation
-
-----
+## Project 3: Algorithm Implementation and Evaluation
 
 Term: Spring 2018
 
