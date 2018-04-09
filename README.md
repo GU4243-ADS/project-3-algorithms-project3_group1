@@ -47,8 +47,11 @@ With our implementation, we didn't see any significant improvement in performanc
 
 + Mingkai Deng
 
-	+ Evaluation algorithm for memory-based model
-
+	+ Researched and implemented evaluation metrics for memory-based model
+	+ Researched method to calculate similarity measures based on Entropy and Mean-Square-Difference 
+	+ Developed R scripts to streamline workflow 
+	+ Presentation
+	
 + Mao Guan
 
 	+ Algorithm for model-based model
