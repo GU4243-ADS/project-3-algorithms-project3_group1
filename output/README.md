@@ -1,7 +1,7 @@
 ## Project 3: Algorithm Implementation and Evaluation
 ### Output folder
 
-User-Item Matrices
+###User-Item Matrices
 
 + MS (https://drive.google.com/open?id=1PfgcdauRd0s5I4_ugsqT4t_cLXEqrXYO)
 + eachmovie (https://drive.google.com/open?id=1nHdRkfs0GX8vfz6_-nxq5Uy0vcW1cYUT)
@@ -30,7 +30,7 @@ Similarity Weight Matrices
 
 - Vector Similiarity
 
-    + MS (
+    + MS (https://drive.google.com/file/d/1JFeWetkRU49WRmAtn_xP82U1vgAB8f0d/view?usp=sharing)
     + eachmovie (
 
 - Mean Sq. Difference
