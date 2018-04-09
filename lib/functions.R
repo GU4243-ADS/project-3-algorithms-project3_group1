@@ -126,7 +126,9 @@ calc_weight <- function(data, method = "pearson") {
         return(cosine(rowA[joint_values], rowB[joint_values]))
       }
       if (method == 'entropy')  {
-        return(KL.empirical(rowA[joint_values],rowB[joint_values]))
+        entropy <- entropy(rowA[joint_values])
+        cond.entropy <- entropy(rowA[joint_values], rowB[joint_values])
+        return(entropy - cond.entropy)
       }
       if (method == 'msd')  {
         return(mean((rowA[joint_values] - rowB[joint_values])^2))
