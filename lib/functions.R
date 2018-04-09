@@ -79,7 +79,7 @@ calc_weight <- function(data, method = "pearson") {
   
   ## Calculate similarity weight matrix
   ## Input: data    - movie data or MS data in user-item matrix form
-  ##        method  - 'pearson', 'psig', 'pvar', 'psigvar', 'spearman', 
+  ##        method  - 'pearson', 'psig', 'pvar', 'spearman', 
   ##                  'vector', 'entropy', 'msd', 'simrank'
   ## Output: similarity weight matrix
     
@@ -114,9 +114,6 @@ calc_weight <- function(data, method = "pearson") {
       }
       if (method == 'pvar') {
         return(corr(cbind(rowA[joint_values], rowB[joint_values]), w = var.weight[joint_values]))
-      }
-      if (method == 'psigvar')  {
-        
       }
       if (method == 'spearman') {
         return(cor(rowA[joint_values], rowB[joint_values], method = 'spearman'))
