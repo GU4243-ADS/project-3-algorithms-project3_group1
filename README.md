@@ -15,6 +15,17 @@
 ### Task 2. Correlation/Similarity Measures
 
 ### Result
+	Movie                         (MAE)	               MS (Rank Score)
+Pearson (Baseline)	             1.09	                26.89
+Pearson (Significance weighting)		
+Pearson (Variance weighting)	      1	                  26.3
+Spearman	                        1.09	               26.89
+Vector Similarity		                                   27.03
+Entropy	
+Mean-Square Difference	          1.1	                 27.14
+SimRank	                          1.08	               27.08
+
+
 
 ### Task 3. Significance and Variance Weighting
 
