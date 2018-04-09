@@ -25,6 +25,8 @@ We also tested two different ways to weigh correlation based on the methods sugg
 
 ### Result
 
+With our implementation, we didn't see any significant improvement in performance. It is possible that for significance weighting, we may need a better measure than the mere number of co-rated items, as the ratings for such items could diverge significantly. The paper suggests significance weighting with Spearman correlation yielded significant improvement, which we didn't experiment in this project. Variance weighting, as already suggested, showed similar result.
+
 ### Contribution Statement
 
 [default](doc/a_note_on_contributions.md) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement.
