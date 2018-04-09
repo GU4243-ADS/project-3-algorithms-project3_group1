@@ -1,0 +1,254 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+## Algorithm Implementation and Evaluation:
+First Part, Load the data from file folder and Tansform it into matrix.
+
+```{r}
+movie_train <- read.csv("../data/eachmovie_sample/data_train.csv", as.is = TRUE, header = TRUE)
+movie_train = movie_train[, 2:4]
+
+movie_test <- read.csv("../data/eachmovie_sample/data_test.csv", as.is = TRUE, header = TRUE)
+movie_test = movie_test[, 2:4]
+
+Micro_train <- read.csv("../data/MS_sample/data_train.csv", as.is = TRUE, header = TRUE)
+Micro_train = Micro_train[, 2:4]
+
+Micro_test <- read.csv("../data/MS_sample/data_test.csv",as.is = TRUE, header = TRUE)
+Micro_test = Micro_test[, 2:4]
+```
+
+## Data Transformation
+Convert the original dataset to a matrix which rows represents users and columns represents items
+We used the data transform function provided by the course materials.
+
+```{r}
+source("../lib/functions.R")
+
+movie_train <- movie_data_transform(movie_train)
+save(movie_train, file = "../output/movie_train.RData")
+
+movie_test <- movie_data_transform(movie_test)
+save(movie_test, file = "../output/movie_test.RData")
+
+Micro_train <- MS_data_transform(Micro_train)
+save(Micro_train, file = "../output/Micro_train.RData")
+
+Micro_test <- MS_data_transform(Micro_test)
+save(Micro_test, file = "../output/Micro_test.RData")
+```
+
+```{r}
+load("../output/Micro_test.RData")
+load("../output/Micro_train.RData")
+load("../output/movie_test.RData")
+load("../output/movie_train.RData")
+# Assign the Microsoft data and the Movie data to the test_data, train_data 
+
+# Microsoft dataset:
+test_data1 <- Micro_test
+train_data1 <- Micro_train
+#Movie dataset:
+test_data2 <- movie_test
+train_data2 <- movie_train
+
+```
+
+```{r}
+
+#Define the Expectation-Maximum Algorithm
+#This function constitute of three steps,
+#First Step-> Initialization of the Data
+#Second Step -> Expectation Step
+#Third Step -> Maximum Step
+
+EM_Train <- function(data, Clusters = 3, threshold = 0.1, Iterations = 150){
+  User_Number <- ncol(data)
+  Item_Number <- nrow(data)
+  items <- colnames(data)
+  
+  # Step One : Data Initialization
+  epoch <- 1 
+  conv_cost <- Inf
+  Mu <- rep(1/Clusters, Clusters)
+  Gamma <- array(0, dim = c(2, User_Number, Clusters))
+  Gamma1 = matrix(runif(User_Number*Clusters, 0, 1), User_Number, Clusters)
+  Gamma2 = 1-Gamma1
+  
+  Gamma[1,,] = Gamma1
+  Gamma[2,,] = Gamma2
+  
+  phi <- matrix(NA, nrow = Item_Number, ncol = Clusters)
+  Prob <- matrix(NA, nrow = Item_Number, ncol = Clusters)
+  Prob_pre <- matrix(0, nrow = Item_Number, ncol = Clusters)
+
+  # Step Two - Expectation Step
+  # The condition of the while loop are the threshold and the Iterations 
+  while(conv_cost > threshold & epoch < Iterations){
+    
+    for(i in 1:Item_Number){ 
+      
+      Sub_Mu_Phi <- array(0,Clusters) 
+      
+      for(j in 1:User_Number) {
+        
+          Sub_Mu_Phi <- Sub_Mu_Phi + log(Gamma[data[i,j]+1, j,])
+      }
+      
+      phi[i, ] <- exp(Sub_Mu_Phi)
+    }
+    
+    Prob <- (Mu * phi)/apply(Mu * phi, 1, sum)
+    
+  # Step Three - Maximization Step
+    Mu <- apply(Prob, 2, sum)/Item_Number
+
+    for(c in 1:Clusters) { 
+      
+      for(j in 1:User_Number) {
+        
+        Sub_Sum_Prob <- Prob[, c] %*% data[, j]
+        
+        Gamma[2, j, c] <- Sub_Sum_Prob/sum(Prob[ ,c])
+        
+        Gamma[1, j, c] <- 1 - Gamma[2, j, c] 
+        
+      }
+    }
+    
+    conv_cost <- norm(Prob - Prob_pre)
+    cat("Cost: ", conv_cost, "\n")
+    cat("Iteration: ", epoch, "\n")
+    Prob_pre <- Prob
+    epoch = epoch + 1
+  }
+    
+  return(list("Prob" = Prob, "Gamma" = Gamma, "Mu" = Mu, "items" = items))
+}  
+```
+
+
+
+```{r}
+
+#Define the  Prediction Function
+Pred <- function(data, gamma, mu, pi, items){
+  data[is.na(data)] <- 0
+  item_test <- colnames(data)
+  order <- match(item_test, items)
+  
+  N_item <- nrow(data)
+  N_user <- ncol(data)
+  predictions <- as.data.frame(matrix(NA, nrow = N_item, ncol = N_user))
+  names(predictions) <- item_test
+
+  user_cluster <- apply(pi, 1, which.max)
+  error <- 0
+  
+  for(i in 1:N_item){
+    for(j in 1:N_user){
+      cluster <- user_cluster[i]
+      index <- order[j]
+      predictions[i,j] <- gamma[2, index, cluster]*mu[cluster]
+    }
+  }
+  
+  save(predictions, file = "../data/cluster_prediction.Rdata")
+  return(predictions)
+}
+```
+
+
+
+
+```{r}
+# Choose the best cluster number
+
+# Separate the training data into two parts--training set and validation set
+cross_validation <- function(start = 3, end = 10, train_data) {
+     train_data = train_data1
+     numberofCluster = start:end
+     
+     valid_data = matrix(0,nrow = nrow(train_data), ncol = ncol(train_data))
+     rownames(valid_data)<-rownames(train_data)
+     colnames(valid_data)<-colnames(train_data)
+     set.seed(2018)
+     Ind<-c()
+     
+      for (i in 1:nrow(train_data)) {
+        
+        Ind<-as.numeric(unlist(which(train_data[i,] == 1)))
+        v_index <- sample(Ind, round(length(Ind) * 0.25))
+        train_data[i,v_index]<-0
+        valid_data[i,v_index]<-1
+      }
+      
+      cv.accuracy<- c()
+      for (i in 1:length(numberofCluster)) {
+       
+        cluster_train = EM_Train(train_data, numberofCluster[i])
+        gamma <- cluster_train$Gamma
+        mu <- cluster_train$Mu
+        prob <- cluster_train$Prob
+        items <- cluster_train$items
+        EM_predict <- Pred(valid_data, gamma, mu, prob, items)
+        cv.accuracy[i] <- test_MS_predictions(EM_predict,valid_data)
+        
+      }
+      
+}
+
+cross_validation(start = 2, end = 16, train_data1)
+```
+
+### From the cross validation results, we could see that the best C is xxx
+
+```{r}
+# Cross_validation accuracy is as follows with clusters from 2 to 12
+#(38.36545 35.97521 37.96144 38.51279 38.29321 39.13209 38.77501 37.41103 38.17605 39.02314 38.17336)
+
+
+```
+### Therefore the best number of clusters is 7
+
+
+```{r}
+source("../lib/functions.R")
+
+rank_score <- function(predicted_test,true_test){
+  ## function to calculate rank score of predicted value
+  ## input: predicted_test - predicted value matrix of test data
+  ##        true_test - test data matrix
+  ## output: rank score
+  d <- 0.02
+  rank_mat_pred <- ncol(predicted_test)+1-t(apply(predicted_test,1,function(x){return(rank(x,ties.method = 'first'))}))
+  rank_mat_test <- ncol(true_test)+1-t(apply(true_test,1,function(x){return(rank(x,ties.method = 'first'))}))
+  vec = ifelse(true_test - d > 0, true_test - d, 0)
+  R_a <- apply(1/(2^((rank_mat_pred-1)/4)) * vec,1,sum)
+  R_a_max <- apply(1/(2^((rank_mat_test-1)/4)) * vec,1,sum)
+  
+  R <- 100*sum(R_a)/sum(R_a_max)
+  return(R)
+}
+
+
+cluster_train <- EM_Train(train_data1, C = 7)
+  
+Gamma <- cluster_train$Gamma
+Mu <- cluster_train$Mu
+Prob <- cluster_train$Prob
+items <- cluster_train$items
+
+Prediction <- Pred(test_data1, Gamma, Mu, Prob, items)
+score = rank_score( Prediction,  test_data1)
+score
+```
+
+
+### Now we could see that the rank_score of the ms data is 39.35477
+### The Time cost is 2 hours .
+
+
+
