@@ -8,7 +8,10 @@ User-Item Matrices
 
 Similarity Weight Matrices
 
-- Pearson: MS (link) and eachmovie (link)
+- Pearson
+
+    + MS (
+    + eachmovie (
 
 - Pearson with significance weighting
 
