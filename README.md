@@ -91,6 +91,7 @@ With our implementation, we didn't see any significant improvement in performanc
 	+ Significance and Variance Weighting
 	+ SimRank
 	+ Slides, Main, ReadMe, and outputs documentation
+	+ Presentation
 
 + Cindy Xu
 
